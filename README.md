@@ -9,8 +9,8 @@ yarn
 ```
 yarn test:node
 
- PASS  ./foo.test.js
-  ✓ should return a list of users (11 ms)
+ PASS  src/fetch.test.js
+  ✓ starts a request with node-fetch (1 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
@@ -24,8 +24,8 @@ Ran all test suites.
 ```
 yarn test:whatwg
 
- PASS  ./foo.test.js
-  ✓ should return a list of users (1 ms)
+ PASS  src/fetch.test.js
+  ✓ starts a request with whatwg-fetch (1 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total

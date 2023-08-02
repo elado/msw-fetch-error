@@ -1,0 +1,21 @@
+{
+  "name": "msw-jest-example",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "test:node": "TEST=node yarn test",
+    "test:whatwg": "TEST=whatwg yarn test"
+  },
+  "dependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "axios": "^1.4.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "msw": "^1.2.3",
+    "node-fetch": "^3.3.2",
+    "whatwg-fetch": "^3.6.17"
+  },
+  "packageManager": "yarn@3.6.1"
+}

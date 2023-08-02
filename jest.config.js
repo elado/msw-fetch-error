@@ -2,8 +2,10 @@ module.exports = {
   setupFiles: [
     process.env.TEST === "node"
       ? "./jest.setup.node.js"
-      : "./jest.setup.whatwg.js",
-  ],
+      : process.env.TEST === "whatwg"
+      ? "./jest.setup.whatwg.js"
+      : undefined,
+  ].filter(Boolean),
   testEnvironment: "jsdom",
 
   transformIgnorePatterns: [

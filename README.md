@@ -4,7 +4,7 @@
 yarn
 ```
 
-Run tests with `node-fetch`:
+## Run tests with `node-fetch`:
 
 ```
 yarn test:node
@@ -19,7 +19,7 @@ Time:        0.73 s, estimated 2 s
 Ran all test suites.
 ```
 
-Run tests with `whatwg-fetch`:
+## Run tests with `whatwg-fetch`:
 
 ```
 yarn test:whatwg
@@ -32,14 +32,30 @@ Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:        0.753 s, estimated 1 s
 Ran all test suites.
-/Users/elad.ossadon/dev/tmp/msw-test/node_modules/jsdom/lib/jsdom/browser/Window.js:376
+/path/to/msw-fetch-error/node_modules/jsdom/lib/jsdom/browser/Window.js:376
       return idlUtils.wrapperForImpl(idlUtils.implForWrapper(window._document)._location);
                                                                               ^
 
 TypeError: Cannot read properties of null (reading '_location')
-    at Window.get location [as location] (/Users/elad.ossadon/dev/tmp/msw-test/node_modules/jsdom/lib/jsdom/browser/Window.js:376:79)
-    at FetchInterceptor.<anonymous> (/Users/elad.ossadon/dev/tmp/msw-test/node_modules/@mswjs/interceptors/src/interceptors/fetch/index.ts:52:9)
-    at step (/Users/elad.ossadon/dev/tmp/msw-test/node_modules/@mswjs/interceptors/lib/interceptors/fetch/index.js:59:23)
-    at Object.next (/Users/elad.ossadon/dev/tmp/msw-test/node_modules/@mswjs/interceptors/lib/interceptors/fetch/index.js:40:53)
-    at fulfilled (/Users/elad.ossadon/dev/tmp/msw-test/node_modules/@mswjs/interceptors/lib/interceptors/fetch/index.js:31:58)
+    at Window.get location [as location] (/path/to/msw-fetch-error/node_modules/jsdom/lib/jsdom/browser/Window.js:376:79)
+    at FetchInterceptor.<anonymous> (/path/to/msw-fetch-error/node_modules/@mswjs/interceptors/src/interceptors/fetch/index.ts:52:9)
+    at step (/path/to/msw-fetch-error/node_modules/@mswjs/interceptors/lib/interceptors/fetch/index.js:59:23)
+    at Object.next (/path/to/msw-fetch-error/node_modules/@mswjs/interceptors/lib/interceptors/fetch/index.js:40:53)
+    at fulfilled (/path/to/msw-fetch-error/node_modules/@mswjs/interceptors/lib/interceptors/fetch/index.js:31:58)
+```
+
+## Run tests with `axios`:
+
+```
+yarn test:axios
+
+
+ PASS  src/axios.test.js
+  ✓ starts a request with axios (11 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.794 s, estimated 1 s
+Ran all test suites matching /axios/i.
 ```

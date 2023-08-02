@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "test:node": "TEST=node yarn test",
-    "test:whatwg": "TEST=whatwg yarn test"
+    "test:node": "TEST=node yarn test fetch",
+    "test:whatwg": "TEST=whatwg yarn test fetch",
+    "test:axios": "yarn test axios"
   },
   "dependencies": {
     "@babel/core": "^7.22.9",
